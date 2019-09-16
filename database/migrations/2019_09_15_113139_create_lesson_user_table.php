@@ -15,7 +15,7 @@ class CreateLessonUserTable extends Migration
     public function up()
     {
         Schema::create('lesson_user', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->integer('lesson_id')->unsigned();
             $table->string('user_id');
             $table->text('message')->nullable();
