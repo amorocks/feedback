@@ -36,7 +36,7 @@ class MessageController extends Controller
 
     		if($request->submit == 'close')
     		{
-				Mail::to('bartjroos@gmail.com')->send(new NewMessage(Auth::user(), $user, $u, $course, $lesson));
+				Mail::to($user->email)->send(new NewMessage(Auth::user(), $user, $u, $course, $lesson));
     		}
     		
     	}
