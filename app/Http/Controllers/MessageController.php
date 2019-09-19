@@ -24,7 +24,7 @@ class MessageController extends Controller
 				$user = new User();
 				$user->id = $u['id'];
 				$user->name = $u['name'];
-				$user->email = "D" . $u['id'] . "@edu.rocwb.nl";
+				$user->email = $u['id'] . "@edu.rocwb.nl";
 				$user->type = "student";
 				$user->save();
 			}
